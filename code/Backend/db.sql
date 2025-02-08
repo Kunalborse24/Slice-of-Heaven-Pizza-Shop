@@ -36,7 +36,7 @@ Insert into pizza(name,details,price,image) value
             ('Margherita', 'Classic Italian with fresh tomatoes and basil', 449, 'margherita.jpg'),
             ('Barbecue Chicken', 'Grilled chicken, barbecue sauce, and red onion', 589, 'barbecue_chicken.jpg'),
             ('Pesto Perfection', 'Fresh basil pesto, cherry tomatoes, and mozzarella', 519, 'pesto_perfection.jpg'),
-            ('Onion Ring Delight', 'Crispy onion rings and melted mozzarella', 509, 'onion_ring_delight.jpg');
+            ('Onion Ring Delight', 'Crispy onion rings and melted mozzarella This is a delicious pizza with extra cheese and spices', 509, 'onion_ring_delight.jpg');
 
 
 
