@@ -1,0 +1,71 @@
+/* styles.css */
+
+/* Base card styles */
+.card {
+    max-width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
+    background-color: #fff; /* Ensure background color is consistent */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Pizza specific styles */
+.pizza-card {
+    max-width: 100%; /* Ensure full width for responsive design */
+}
+
+.pizza-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.pizza-card .card-title {
+    font-size: 1rem; /* Adjust font size */
+    text-align: center; /* Center align title for pizza cards */
+}
+
+.pizza-card .card-text {
+    font-size: 15px; /* Adjust font size */
+}
+
+.pizza-card .price {
+    font-size: 1.1rem;
+}
+
+.pizza-card .btn {
+    width: 100%;
+    padding: 10px;
+}

@@ -1,0 +1,154 @@
+/* Orders.css */
+
+/* General Layout */
+.orders-container {
+    /* background: linear-gradient(to right, #6a11cb, #2575fc);
+    padding: 30px;
+    max-width: 100%;
+   
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    padding: 30px; */
+    padding: 30px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    min-height: 100vh;
+
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.empty-message {
+    font-size: 1.5rem;
+    color: #888;
+    text-align: center;
+}
+
+.orders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Order Card Styles */
+.order-card {
+    background: linear-gradient(145deg, #f0f0f0, #e0e0e0);
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Order Card Header */
+.order-card-header {
+    background: #3f51b5;
+    color: #fff;
+    padding: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #fff;
+}
+
+.order-id {
+    font-weight: bold;
+}
+
+.order-date {
+    font-style: italic;
+}
+
+/* Order Card Body */
+.order-card-body {
+    padding: 15px;
+    color: #333;
+}
+
+.order-total {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.order-status {
+    font-size: 1rem;
+    color: #888;
+}
+
+/* Order Card Footer */
+.order-card-footer {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    background: #f0f0f0;
+    border-top: 2px solid #ddd;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Button Styles */
+.order-card-footer .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;  /* Ensures text is visible */
+    text-align: center;
+    min-width: 120px; /* Ensures buttons have a consistent size */
+}
+
+/* Hover Effect for All Buttons */
+.order-card-footer .btn:hover {
+    transform: scale(1.05);
+}
+
+/* Specific Button Styles */
+.order-card-footer .btn-details {
+    background: #4caf50;  /* Green for "Details" */
+}
+
+.order-card-footer .btn-details:hover {
+    background: #45a049;
+}
+
+.order-card-footer .btn-delete {
+    background: #f44336;  /* Red for "Delete" */
+}
+
+.order-card-footer .btn-delete:hover {
+    background: #e53935;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .orders-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .order-card-header {
+        font-size: 1rem;
+    }
+
+    .order-total {
+        font-size: 1rem;
+    }
+
+    .order-status {
+        font-size: 0.9rem;
+    }
+}
+
