@@ -102,7 +102,7 @@ export function Signin() {
         sessionStorage['token'] = token;
 
         toast.success("Successful login");
-        navigate("/home");
+        navigate("/");
       } else {
         toast.error(result['error']);
       }

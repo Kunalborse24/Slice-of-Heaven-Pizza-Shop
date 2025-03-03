@@ -1,4 +1,5 @@
 /* General Page Styles */
+
 .cart-container {
     padding: 30px;
     background: linear-gradient(to right, #6a11cb, #2575fc);
@@ -6,6 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .cart-title {
@@ -41,6 +43,7 @@
 }
 
 .cart-table th, .cart-table td {
+    text-align: center;
     padding: 15px;
     border-bottom: 1px solid #ddd;
 }
@@ -76,21 +79,24 @@
     align-items: center;
 }
 
-.btn {
+
+.btn-increase {
     padding: 6px 12px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
     font-size: 16px;
-}
-
-.btn-increase {
     background-color: #28a745;
     color: white;
     margin-right: 5px;
 }
 
 .btn-decrease {
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
     background-color: #dc3545;
     color: white;
 }
@@ -100,12 +106,16 @@
     font-weight: bold;
     font-size: 18px;
     color: #333;
+    
 }
 
 .total-price {
     font-size: 18px;
     font-weight: bold;
     color: #28a745;
+ 
+
+    
 }
 
 /* Place Order Button */
