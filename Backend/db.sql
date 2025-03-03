@@ -38,6 +38,24 @@ Insert into pizza(name,details,price,image) value
             ('Pesto Perfection', 'Fresh basil pesto, cherry tomatoes, and mozzarella', 519, 'pesto_perfection.jpg'),
             ('Onion Ring Delight', 'Crispy onion rings and melted mozzarella This is a delicious pizza with extra cheese and spices', 509, 'onion_ring_delight.jpg');
 
+--more pizzas\
+INSERT INTO pizza(name, details, price, image) VALUES
+            ('BBQ Veggie Supreme', 'Grilled vegetables, barbecue sauce, and mozzarella', 549, 'bbq_veggie_supreme.jpg'),
+            ('Buffalo Chicken', 'Spicy buffalo chicken with blue cheese and celery', 629, 'buffalo_chicken.jpg'),
+            ('Hawaiian', 'A tropical delight with ham, pineapple, and mozzarella', 539, 'hawaiian.jpg'),
+            ('Chili Cheese Explosion', 'Spicy chili, jalapenos, cheese, and a dash of hot sauce', 579, 'chili_cheese_explosion.jpg'),
+            ('Garlic Parmesan', 'Creamy garlic sauce, parmesan, mozzarella, and fresh herbs', 499, 'garlic_parmesan.jpg'),
+            ('Lobster and Shrimp Delight', 'Rich lobster, succulent shrimp, and creamy garlic sauce', 799, 'lobster_shrimp_delight.jpg'),
+            ('Veggie Supreme', 'Tomatoes, olives, mushrooms, onions, and mozzarella with a basil pesto drizzle', 589, 'veggie_supreme.jpg'),
+            ('Cheeseburger Pizza', 'Beef, cheddar, onions, pickles, and ketchup for a cheeseburger twist', 649, 'cheeseburger_pizza.jpg'),
+            ('Tandoori Chicken', 'Spicy tandoori marinated chicken with onions and cilantro', 579, 'tandoori_chicken.jpg'),
+            ('Pineapple Perfection', 'Fresh pineapple, mozzarella, and a hint of sweet chili sauce', 499, 'pineapple_perfection.jpg'),
+            ('Cajun Chicken', 'Cajun-spiced chicken, bell peppers, onions, and mozzarella', 629, 'cajun_chicken.jpg'),
+            ('Four Cheese Delight', 'A rich combination of mozzarella, parmesan, cheddar, and goat cheese', 599, 'four_cheese_delight.jpg'),
+            ('Ranch Chicken', 'Grilled chicken with ranch dressing, onions, and mozzarella', 589, 'ranch_chicken.jpg'),
+            ('Spinach & Artichoke', 'Creamy spinach and artichoke with mozzarella and garlic', 549, 'spinach_artichoke.jpg'),
+            ('Tropical Fiesta', 'Pineapple, ham, green pepper, and mozzarella', 529, 'tropical_fiesta.jpg');
+
 
 
 --order

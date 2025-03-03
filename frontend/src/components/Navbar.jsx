@@ -1,45 +1,115 @@
-
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { Button } from 'react-bootstrap'; // Ensure you have react-bootstrap installed
-import { useSelector } from 'react-redux';
-
-
+import React from "react";
+import { Link, useNavigate, NavLink } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import { useSelector } from "react-redux";
+import { FaUserAlt, FaShoppingCart } from "react-icons/fa";
+import "../css/Navbar.css";
+import { GiFullPizza } from "react-icons/gi";
 
 export function Navbar() {
+  const navigate = useNavigate();
+  const cart = useSelector((state) => state.cart);
+  const token = sessionStorage.getItem("token");
 
-    const navigate=useNavigate()
-    //Read the store buy using selector
+  const onLogout = () => {
+    sessionStorage.removeItem("token");
+    navigate("/");
+  };
 
-    const cart=useSelector(state=>state.cart)
+  return (
+    <nav
+      className="navbar navbar-expand-lg navbar-dark shadow-lg "
+      style={{ background: " #007bff" }}
+    >
+      <div className="container-fluid">
+        <Link
+          to="/"
+          className="me-auto d-flex align-items-center"
+          style={{
+            marginLeft: "5rem",
+            textDecoration: "none",
+            fontWeight: "bold",
+            color: "black",
+          }}
+        >
+          <GiFullPizza className="mx-2" />
+          <span className="mx-1">Slice of Heaven</span>
+        </Link>
 
-    const onLogout=() => { 
-        sessionStorage.removeItem('token')
-        navigate('/')
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-    }
-    return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-            <div className="container-fluid">
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
-                            <Link className="nav-link" aria-current="page" to="/home">Home</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" aria-current="page" to="/cart">Cart({cart.items.length})</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" aria-current="page" to="/orders">Orders</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Button onClick={onLogout} className="nav-link" aria-current="page">Logout</Button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    );
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            {/* Home Link */}
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/" activeClassName="active">
+                Home
+              </NavLink>
+            </li>
+
+            {/* Cart Link with Icon */}
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/cart" activeClassName="active">
+                <FaShoppingCart className="me-2" />
+                Cart ({cart.items.length})
+              </NavLink>
+            </li>
+
+            {/* Orders Link */}
+            <li className="nav-item">
+              {token ? (
+                <NavLink
+                  className="nav-link"
+                  to="/orders"
+                  activeClassName="active"
+                >
+                  Orders
+                </NavLink>
+              ) : (
+                <NavLink
+                  className="nav-link"
+                  to="/signin"
+                  activeClassName="active"
+                >
+                  Orders
+                </NavLink>
+              )}
+            </li>
+
+            {/* Login/Logout Button */}
+            <li className="nav-item">
+              {token ? (
+                <Button
+                  onClick={onLogout}
+                  className="btn btn-outline-light d-flex align-items-center"
+                >
+                  <FaUserAlt className="me-2" />
+                  Logout
+                </Button>
+              ) : (
+                <Link to="/signin">
+                  <Button className="btn btn-outline-light d-flex align-items-center">
+                    <FaUserAlt className="me-2" />
+                    Login
+                  </Button>
+                </Link>
+              )}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
 }
 
 export default Navbar;

@@ -2,8 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 const jwt = require('jsonwebtoken');
-// const path = require('path'); // For serving static files
-
 const config = require('./config');
  const utils = require('./utils');
 //create new react app
@@ -14,13 +12,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('images'))
 
-
-// // Serve static files (images) before authentication middleware
-// app.use('/images', express.static(path.join(__dirname, 'images')));
-
 // Authentication Middleware//configure protected routes
  app.use((request, response, next) => {
-    const skipUrls = ['/user/signup', '/user/signin']; 
+    const skipUrls = ['/user/signup', '/user/signin','/pizza/']; 
 
     if (skipUrls.findIndex(item=>item==request.url)!=-1) {
         next();
@@ -31,16 +25,15 @@ app.use(express.static('images'))
         } else {
             try {
                 const payload = jwt.verify(token, config.secret);
-                request.data = payload; // Assign payload to request.data for use in subsequent middleware/handlers
-                next(); // Proceed to the next middleware or route handler
+                request.data = payload; 
+                next(); 
             } catch (ex) {
                 return response.send(utils.createError('Invalid token'));
             }
         }
     }
 });
-
-// // Routes
+// Routes
 const userRouter = require('./routes/users');
 const pizzaRouter = require('./routes/pizza');
 const orderRouter = require('./routes/orders');

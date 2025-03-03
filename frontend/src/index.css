@@ -17,3 +17,8 @@ code {
   margin-top: 20px;
   margin-bottom: 20px ;
 }
+
+.custome-container{
+  margin: 0;
+  padding: 0;
+}
