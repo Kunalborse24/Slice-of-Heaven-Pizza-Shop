@@ -1,6 +1,5 @@
 # Slice of Heaven Pizza Shop
-
-A simple web application for managing orders and menu items for a pizza shop. This project consists of a backend and frontend with a MySQL database.
+A full-stack pizza ordering application built with React.js, Node.js, Express.js, and MySQL. Users can browse a menu, place orders, and view order history. The application features responsive design and a user-friendly interface for both desktop and mobile devices
 
 ## Steps to Set Up the Project
 
@@ -19,9 +18,8 @@ cd Slice-of-Heaven-Pizza-Shop
   ```
 ## 2.Open the db.js file and change the MySQL username and password to match your local database credentials.
 
-  ## 3.Run the db.sql file in MySQL to set up the database:
+  ## 3.Run the db.sql file in MySQL to set up the database
   
-      Open the MySQL command prompt and execute the db.sql File
   ## 4.Install all the required backend dependencies:
        npm install
        yarn imstall
