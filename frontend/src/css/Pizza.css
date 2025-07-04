@@ -1,6 +1,4 @@
-/* styles.css */
-
-/* Base card styles */
+/* Pizza.css */
 .card {
     max-width: 350px;
     border-radius: 8px;
@@ -25,9 +23,6 @@
     font-size: 1.2rem;
     margin-top: 5px;
     margin-bottom: 10px;
-   
-
-
 }
 
 .card-text {
@@ -48,11 +43,9 @@
     width: 100%;
     padding: 10px;
 }
-
-/* Pizza specific styles */
 .pizza-card {
     max-width: 100%;                                                                
-    border-radius: 10px;/* Ensure full width for responsive design */
+    border-radius: 10px;
     
     background-color: #f8f9fa; 
     
@@ -66,32 +59,28 @@
 }
 
 .pizza-card .card-title {
-    font-size: 1rem; /* Adjust font size */
-    text-align: center; /* Center align title for pizza cards */
+    font-size: 1rem; 
+    text-align: center;
 }
 
 .pizza-card .card-text {
-    font-size: 15px; /* Adjust font size */
+    font-size: 15px; 
 }
 
 .pizza-card .price {
     font-size: 1.1rem;
 }
-
-
-
-/* Adjusting the button inside the pizza card */
 .pizza-card .card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center; /* This centers the button */
-    height: 100%; /* Ensure the card body fills the space */
+    align-items: center; 
+    height: 100%; 
 }
 
 .pizza-card .btn {
-    width: 50%; /* Optional: Adjust width of button */
+    width: 50%; 
     display: block;
-    text-align: center; /* Ensure text is centered inside the button */
+    text-align: center; 
     margin-bottom: 10px;
 }

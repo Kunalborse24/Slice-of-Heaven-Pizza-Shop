@@ -42,7 +42,7 @@ export async function getAllOrder() {
             },
         }
         const response = await axios.get(url, headers);
-        console.log(response)
+        console.log(response);
 
         return response.data;
     } catch (ex) {
@@ -52,3 +52,20 @@ export async function getAllOrder() {
     }
 }
 
+export async function OrderDetails(orderId) {
+    try {
+         const url = createUrl(`order/details/${orderId}`);
+         const headers = {
+            headers: {
+                token: sessionStorage['token']
+            },
+        }
+        const response = await axios.get(url, headers);
+        return response.data;
+    } catch (ex) {
+        console.error('Error fetching orders Details:', ex);
+        return createError(ex);
+        
+    }
+    
+}

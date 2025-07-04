@@ -1,6 +1,4 @@
 /* Orders.css */
-
-/* General Layout */
 .orders-container {
     /* background: linear-gradient(to right, #6a11cb, #2575fc);
     padding: 30px;
@@ -38,7 +36,7 @@
     gap: 20px;
 }
 
-/* Order Card Styles */
+
 .order-card {
     background: linear-gradient(145deg, #f0f0f0, #e0e0e0);
     border-radius: 12px;
@@ -52,7 +50,7 @@
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Order Card Header */
+
 .order-card-header {
     background: #3f51b5;
     color: #fff;
@@ -72,7 +70,6 @@
     font-style: italic;
 }
 
-/* Order Card Body */
 .order-card-body {
     padding: 15px;
     color: #333;
@@ -89,8 +86,6 @@
     font-weight: 500;
     color: #888;
 }
-
-/* Order Card Footer */
 .order-card-footer {
     padding: 15px;
     display: flex;
@@ -99,8 +94,6 @@
     border-top: 2px solid #ddd;
     border-radius: 0 0 12px 12px;
 }
-
-/* Button Styles */
 .order-card-footer .btn {
     padding: 10px 20px;
     border: none;
@@ -108,19 +101,21 @@
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    color: white;  /* Ensures text is visible */
+    color: white; 
     text-align: center;
-    min-width: 120px; /* Ensures buttons have a consistent size */
+    min-width: 120px; 
 }
 
-/* Hover Effect for All Buttons */
+
 .order-card-footer .btn:hover {
     transform: scale(1.05);
 }
 
-/* Specific Button Styles */
+
 .order-card-footer .btn-details {
-    background: #4caf50;  /* Green for "Details" */
+    background: #4caf50;  
+    display: block;
+    margin: auto;
 }
 
 .order-card-footer .btn-details:hover {
@@ -128,7 +123,7 @@
 }
 
 .order-card-footer .btn-delete {
-    background: #f44336;  /* Red for "Delete" */
+    background: #f44336; 
 }
 
 .order-card-footer .btn-delete:hover {
@@ -154,3 +149,19 @@
     }
 }
 
+.modal-close-icon {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #444;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+    z-index: 1010;
+}
+
+.modal-close-icon:hover {
+    color: #f44336;
+    transform: scale(1.2);
+}

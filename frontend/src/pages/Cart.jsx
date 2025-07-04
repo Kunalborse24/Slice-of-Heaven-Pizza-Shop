@@ -6,7 +6,7 @@ import config from "../config";
 import { clear, updateQuantity } from "../features/cartSilce";
 import { placeOrder } from "../services/order";
 import { toast } from "react-toastify";
-import '../css/Cart.css';  // Import the custom CSS for styling
+import '../css/Cart.css'; 
 
 export function Cart() {
     const navigate = useNavigate();
@@ -48,8 +48,6 @@ export function Cart() {
         }
     }
     };
-
-    // Function to format price with ₹ symbol
     const formatPrice = (price) => {
         return `₹${price.toFixed(2)}`;
     };
