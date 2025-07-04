@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { getAllOrder } from "../services/order";
+// import { getAllOrder } from "../services/order";
 import { toast } from "react-toastify";
-import '../css/Orders.css';  // Import custom CSS for styling
+import OrderDetailsModal  from "../components/OrderDetailsModal";
+import '../css/Orders.css'; 
 
 export function Orders() {
     const [orders, setOrders] = useState([]);
+    const [selectedOrderId, setSelectedOrderId] = useState(null);
    
     const loadOrders = async () => {
         const result = await getAllOrder();
@@ -19,11 +22,23 @@ export function Orders() {
     useEffect(() => {
         loadOrders();
     }, []);
-
-    // Function to format price with ₹ symbol
     const formatPrice = (price) => {
         return `₹${price.toFixed(2)}`;
     };
+    // const Details= async(orderId)=>{
+    //     try {
+    //                 const result = await OrderDetails(orderId);
+    //                 if (result.status === 'success') {
+    //                      const details = result.data;
+    //                      console.log("order Details",details)
+    //                 } else {
+    //                     toast.error(result.error || "An error occurred while featching the order Details");
+    //                 }
+    //             } catch (error) {
+    //                 toast.error("An unexpected error occurred");
+    //             }
+
+    // };
 
     return (
         <>
@@ -42,19 +57,24 @@ export function Orders() {
                                 </div>
                                 <div className="order-card-body">
                                     <p className="order-total">Total Amount: {formatPrice(order.totalAmount)}</p>
-                                    <p className="order-status">Status: {order.status || "Pending"}</p>
+                                    <p className="order-status">Status: {order.status || "DELIVERED"}</p>
                                 </div>
                                 <div className="order-card-footer">
-                                    <button className="btn btn-details">Details</button>
-                                    <button className="btn btn-delete">Delete</button>
+                                    <button onClick={() => setSelectedOrderId(order.id)} className="btn btn-details">Details</button>
+                                    {/* <button className="btn btn-delete">Delete</button> */}
                                 </div>
                             </div>
                         ))}
                     </div>
                 )}
             </div>
+            {selectedOrderId && (
+                <OrderDetailsModal
+                    orderId={selectedOrderId}
+                    onClose={() => setSelectedOrderId(null)}
+                />
+            )}
         </>
     );
 }
-
 export default Orders;

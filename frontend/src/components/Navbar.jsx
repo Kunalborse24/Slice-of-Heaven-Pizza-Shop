@@ -50,22 +50,17 @@ export function Navbar() {
 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            {/* Home Link */}
             <li className="nav-item">
               <NavLink className="nav-link" to="/" activeClassName="active">
                 Home
               </NavLink>
             </li>
-
-            {/* Cart Link with Icon */}
             <li className="nav-item">
               <NavLink className="nav-link" to="/cart" activeClassName="active">
                 <FaShoppingCart className="me-2" />
                 Cart ({cart.items.length})
               </NavLink>
             </li>
-
-            {/* Orders Link */}
             <li className="nav-item">
               {token ? (
                 <NavLink
@@ -85,8 +80,6 @@ export function Navbar() {
                 </NavLink>
               )}
             </li>
-
-            {/* Login/Logout Button */}
             <li className="nav-item">
               {token ? (
                 <Button

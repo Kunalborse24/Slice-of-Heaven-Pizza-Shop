@@ -2,18 +2,14 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { signupUser } from '../services/user';
-import '../css/Signup.css'; // Import the custom CSS for styling
-
+import '../css/Signup.css'; 
 export function Signup() {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-
-    // Get navigation function
     const navigate = useNavigate();
-
     const onSignup = async () => {
         if (firstName.length === 0) {
             toast.warn('Please enter your first name');

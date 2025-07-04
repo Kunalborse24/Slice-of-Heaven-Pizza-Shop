@@ -1,4 +1,4 @@
-/* General Page Styles */
+/* Cart Page Styles */
 
 .cart-container {
     padding: 30px;
@@ -23,8 +23,6 @@
     font-size: 24px;
     text-align: center;
 }
-
-/* Cart Table Styles */
 .cart-table-container {
     width: 100%;
     max-width: 1100px;
@@ -35,24 +33,20 @@
     margin-bottom: 30px;
     padding: 20px;
 }
-
 .cart-table {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
 }
-
 .cart-table th, .cart-table td {
     text-align: center;
     padding: 15px;
     border-bottom: 1px solid #ddd;
 }
-
 .cart-table th {
     background-color: #f5f5f5;
     font-weight: bold;
 }
-
 .cart-item:hover {
     background-color: #f9f9f9;
 }
@@ -63,23 +57,18 @@
     object-fit: cover;
     border-radius: 8px;
 }
-
 .item-name {
     font-size: 18px;
     font-weight: bold;
 }
-
 .item-details {
     font-size: 14px;
     color: #777;
 }
-
 .actions {
     display: flex;
     align-items: center;
 }
-
-
 .btn-increase {
     padding: 6px 12px;
     border-radius: 5px;
@@ -90,7 +79,6 @@
     color: white;
     margin-right: 5px;
 }
-
 .btn-decrease {
     padding: 6px 12px;
     border-radius: 5px;
@@ -100,25 +88,17 @@
     background-color: #dc3545;
     color: white;
 }
-
-/* Total Row */
 .total-label {
     font-weight: bold;
     font-size: 18px;
     color: #333;
     
 }
-
 .total-price {
     font-size: 18px;
     font-weight: bold;
     color: #28a745;
- 
-
-    
 }
-
-/* Place Order Button */
 .place-order-container {
     display: flex;
     justify-content: center;

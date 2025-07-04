@@ -26,6 +26,7 @@ router.get('/details/:id', async (request, response) => {
                            from orderDetails
                            WHERE orderId = ?`;
         const [details] = await db.execute(statement, [id]);
+        console.log('details',details);
         response.send(utils.createSuccess(details));
     } catch (ex) {
         response.send(utils.createError(ex));
